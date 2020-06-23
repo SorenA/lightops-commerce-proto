@@ -1,2 +1,3 @@
-# lightops-commerce-proto
-Monorepo for LightOps Commerce Service Definitions using Protocol Buffers
+# LightOps Commerce - Proto
+
+Monorepo for LightOps Commerce Service definitions using Protocol Buffers.
