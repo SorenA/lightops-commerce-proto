@@ -6,3 +6,4 @@ Monorepo for LightOps Commerce Service definitions using Protocol Buffers.
 
 - Health V1
 - Navigation V1
+- Content Page V1
