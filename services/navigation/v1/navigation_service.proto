@@ -27,7 +27,6 @@ message ProtoNavigation {
 	repeated ProtoNavigation sub_navigations = 6;
 }
 
-
 /*************
  * Services
  *************/
