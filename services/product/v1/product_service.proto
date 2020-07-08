@@ -42,7 +42,7 @@ message ProtoProductVariant {
 }
 
 message ProtoMoney {
-    // ISO 4217 3-letter currency code
+  // ISO 4217 3-letter currency code
   string currency_code = 1;
 
   // Whole units part of the amount
