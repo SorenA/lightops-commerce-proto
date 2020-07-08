@@ -10,21 +10,21 @@ import "google/protobuf/wrappers.proto";
  * Models
  *************/
 message ProtoNavigationLink {
-	string url = 1;
-	string title = 2;
-	string target = 3;
+  string url = 1;
+  string title = 2;
+  string target = 3;
 }
 
 message ProtoNavigation {
-	string id = 1;
-	string handle = 2;
+  string id = 1;
+  string handle = 2;
 
-	google.protobuf.StringValue parent_navigation_id = 3;
+  google.protobuf.StringValue parent_navigation_id = 3;
 
-	ProtoNavigationLink header = 4;
-	repeated ProtoNavigationLink links = 5;
+  ProtoNavigationLink header = 4;
+  repeated ProtoNavigationLink links = 5;
 
-	repeated ProtoNavigation sub_navigations = 6;
+  repeated ProtoNavigation sub_navigations = 6;
 }
 
 /*************

@@ -10,20 +10,20 @@ import "google/protobuf/wrappers.proto";
  * Models
  *************/
 message ProtoContentPage {
-	string id = 1;
-	string handle = 2;
-	string url = 3;
+  string id = 1;
+  string handle = 2;
+  string url = 3;
 
   google.protobuf.StringValue parent_content_page_id = 4;
 
-	string title = 5;
-	string type = 6;
+  string title = 5;
+  string type = 6;
   string description = 7;
 
-	string seo_title = 8;
+  string seo_title = 8;
   string seo_description = 9;
 
-	string primary_image = 10;
+  string primary_image = 10;
 }
 
 /*************

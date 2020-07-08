@@ -8,11 +8,11 @@ option csharp_namespace = "LightOps.Commerce.Proto.Services.MetaField.V1";
  * Models
  *************/
 message ProtoMetaField {
-	string parent_entity_type = 1;
-	string parent_entity_id = 2;
-	string name = 3;
-	string type = 4;
-	string value = 5;
+  string parent_entity_type = 1;
+  string parent_entity_id = 2;
+  string name = 3;
+  string type = 4;
+  string value = 5;
 }
 
 /*************
@@ -28,9 +28,9 @@ service ProtoMetaFieldService {
  *************/
 // GetMetaFieldByParent
 message ProtoGetMetaFieldByParentRequest {
-	string parent_entity_type = 1;
-	string parent_entity_id = 2;
-	string name = 3;
+  string parent_entity_type = 1;
+  string parent_entity_id = 2;
+  string name = 3;
 }
 
 message ProtoGetMetaFieldByParentResponse {
@@ -39,8 +39,8 @@ message ProtoGetMetaFieldByParentResponse {
 
 // GetMetaFieldsByParent
 message ProtoGetMetaFieldsByParentRequest {
-	string parent_entity_type = 1;
-	string parent_entity_id = 2;
+  string parent_entity_type = 1;
+  string parent_entity_id = 2;
 }
 
 message ProtoGetMetaFieldsByParentResponse {
