@@ -60,7 +60,7 @@ message ProtoGetContentPagesByRootResponse {
   repeated ProtoContentPage content_pages = 1;
 }
 
-// GetContentPagesByParendId
+// GetContentPagesByParentId
 message ProtoGetContentPagesByParentIdRequest {
   string parent_id = 1;
 }

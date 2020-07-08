@@ -60,7 +60,7 @@ message ProtoGetNavigationsByRootResponse {
   repeated ProtoNavigation navigations = 1;
 }
 
-// GetNavigationsByParendId
+// GetNavigationsByParentId
 message ProtoGetNavigationsByParentIdRequest {
   string parent_id = 1;
 }
