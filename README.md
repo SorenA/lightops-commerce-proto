@@ -9,3 +9,4 @@ Monorepo for LightOps Commerce Service definitions using Protocol Buffers.
 - Content Page V1
 - Meta Field V1
 - Category V1
+- Product V1
