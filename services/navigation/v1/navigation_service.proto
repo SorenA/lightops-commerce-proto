@@ -32,6 +32,8 @@ message ProtoNavigation {
  *************/
 service ProtoNavigationService {
   rpc GetNavigation(ProtoGetNavigationRequest) returns (ProtoGetNavigationResponse) {}
+  rpc GetNavigationsById(GetNavigationsByIdRequest) returns (GetNavigationsByIdResponse) {}
+  rpc GetNavigationsByHandle(GetNavigationsByHandleRequest) returns (GetNavigationsByHandleResponse) {}
   rpc GetNavigationsByRoot(ProtoGetNavigationsByRootRequest) returns (ProtoGetNavigationsByRootResponse) {}
   rpc GetNavigationsByParentId(ProtoGetNavigationsByParentIdRequest) returns (ProtoGetNavigationsByParentIdResponse) {}
 }
@@ -49,6 +51,24 @@ message ProtoGetNavigationRequest {
 
 message ProtoGetNavigationResponse {
   ProtoNavigation navigation = 1;
+}
+
+// GetNavigationsById
+message GetNavigationsByIdRequest {
+  repeated string ids = 1;
+}
+
+message GetNavigationsByIdResponse {
+  repeated ProtoNavigation navigations = 1;
+}
+
+// GetNavigationsByHandle
+message GetNavigationsByHandleRequest {
+  repeated string handles = 1;
+}
+
+message GetNavigationsByHandleResponse {
+  repeated ProtoNavigation navigations = 1;
 }
 
 // GetNavigationsByRoot
