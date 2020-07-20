@@ -58,9 +58,11 @@ message ProtoMoney {
  *************/
 service ProtoProductService {
   rpc GetProduct(ProtoGetProductRequest) returns (ProtoGetProductResponse) {}
-  rpc GetProductsById(GetProductsByIdRequest) returns (GetProductsByIdResponse) {}
-  rpc GetProductsByHandle(GetProductsByHandleRequest) returns (GetProductsByHandleResponse) {}
+  rpc GetProductsByIds(GetProductsByIdsRequest) returns (GetProductsByIdsResponse) {}
+  rpc GetProductsByHandles(GetProductsByHandlesRequest) returns (GetProductsByHandlesResponse) {}
+
   rpc GetProductsByCategoryId(ProtoGetProductsByCategoryIdRequest) returns (ProtoGetProductsByCategoryIdResponse) {}
+
   rpc GetProductsBySearch(ProtoGetProductsBySearchRequest) returns (ProtoGetProductsBySearchResponse) {}
 }
 
@@ -79,21 +81,21 @@ message ProtoGetProductResponse {
   ProtoProduct product = 1;
 }
 
-// GetProductsById
-message GetProductsByIdRequest {
+// GetProductsByIds
+message GetProductsByIdsRequest {
   repeated string ids = 1;
 }
 
-message GetProductsByIdResponse {
+message GetProductsByIdsResponse {
   repeated ProtoProduct products = 1;
 }
 
-// GetProductsByHandle
-message GetProductsByHandleRequest {
+// GetProductsByHandles
+message GetProductsByHandlesRequest {
   repeated string handles = 1;
 }
 
-message GetProductsByHandleResponse {
+message GetProductsByHandlesResponse {
   repeated ProtoProduct products = 1;
 }
 
