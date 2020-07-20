@@ -36,6 +36,7 @@ service ProtoNavigationService {
   rpc GetNavigationsByHandles(GetNavigationsByHandlesRequest) returns (GetNavigationsByHandlesResponse) {}
 
   rpc GetNavigationsByParentId(ProtoGetNavigationsByParentIdRequest) returns (ProtoGetNavigationsByParentIdResponse) {}
+  rpc GetNavigationsByParentIds(ProtoGetNavigationsByParentIdsRequest) returns (ProtoGetNavigationsByParentIdsResponse) {}
 
   rpc GetNavigationsByRoot(ProtoGetNavigationsByRootRequest) returns (ProtoGetNavigationsByRootResponse) {}
 }
@@ -79,6 +80,15 @@ message ProtoGetNavigationsByParentIdRequest {
 }
 
 message ProtoGetNavigationsByParentIdResponse {
+  repeated ProtoNavigation navigations = 1;
+}
+
+// GetNavigationsByParentIds
+message ProtoGetNavigationsByParentIdsRequest {
+  repeated string parent_ids = 1;
+}
+
+message ProtoGetNavigationsByParentIdsResponse {
   repeated ProtoNavigation navigations = 1;
 }
 

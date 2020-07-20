@@ -35,6 +35,7 @@ service ProtoContentPageService {
   rpc GetContentPagesByHandles(GetContentPagesByHandlesRequest) returns (GetContentPagesByHandlesResponse) {}
 
   rpc GetContentPagesByParentId(ProtoGetContentPagesByParentIdRequest) returns (ProtoGetContentPagesByParentIdResponse) {}
+  rpc GetContentPagesByParentIds(ProtoGetContentPagesByParentIdsRequest) returns (ProtoGetContentPagesByParentIdsResponse) {}
 
   rpc GetContentPagesByRoot(ProtoGetContentPagesByRootRequest) returns (ProtoGetContentPagesByRootResponse) {}
   rpc GetContentPagesBySearch(ProtoGetContentPagesBySearchRequest) returns (ProtoGetContentPagesBySearchResponse) {}
@@ -79,6 +80,15 @@ message ProtoGetContentPagesByParentIdRequest {
 }
 
 message ProtoGetContentPagesByParentIdResponse {
+  repeated ProtoContentPage content_pages = 1;
+}
+
+// GetContentPagesByParentIds
+message ProtoGetContentPagesByParentIdsRequest {
+  repeated string parent_ids = 1;
+}
+
+message ProtoGetContentPagesByParentIdsResponse {
   repeated ProtoContentPage content_pages = 1;
 }
 
