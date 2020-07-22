@@ -1,11 +1,11 @@
 syntax = "proto3";
 
-package service;
+package lightops.service;
 
 option csharp_namespace = "LightOps.Commerce.Proto.Services";
 
 import "google/protobuf/wrappers.proto";
-import "../type/category.proto";
+import "Protos/type/category.proto";
 
 enum CategorySortKey {
   DEFAULT = 0;
@@ -15,8 +15,8 @@ enum CategorySortKey {
 }
 
 service CategoryProtoService {
-  // Gets a specific category by handle
-  rpc GetCategoryByHandle(GetCategoryByHandleProtoRequest) returns (GetCategoryByHandleProtoResponse) {}
+  // Gets a list of categories by handle
+  rpc GetCategoryByHandles(GetCategoryByHandlesProtoRequest) returns (GetCategoryByHandlesProtoResponse) {}
 
   // Gets a list of categories by ids
   rpc GetCategoriesByIds(GetCategoriesByIdsProtoRequest) returns (GetCategoriesByIdsProtoResponse) {}
@@ -25,16 +25,16 @@ service CategoryProtoService {
   rpc GetCategoriesBySearch(GetCategoriesBySearchProtoRequest) returns (GetCategoriesBySearchProtoResponse) {}
 }
 
-// GetCategoryByHandle request model
-message GetCategoryByHandleProtoRequest {
-  // The handle of the category requested
-  string handle = 1;
+// GetCategoryByHandles request model
+message GetCategoryByHandlesProtoRequest {
+  // The handles of the categories requested
+  repeated string handles = 1;
 }
 
-// GetCategoryByHandle response model
-message GetCategoryByHandleProtoResponse {
-  // The category found, if any
-  lightops.type.CategoryProto category = 1;
+// GetCategoryByHandles response model
+message GetCategoryByHandlesProtoResponse {
+  // The categories found, if any
+  repeated lightops.type.CategoryProto categories = 1;
 }
 
 // GetCategoriesByIds request model

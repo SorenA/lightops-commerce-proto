@@ -1,11 +1,11 @@
 syntax = "proto3";
 
-package service;
+package lightops.service;
 
 option csharp_namespace = "LightOps.Commerce.Proto.Services";
 
 import "google/protobuf/wrappers.proto";
-import "../type/content_page.proto";
+import "Protos/type/content_page.proto";
 
 enum ContentPageSortKey {
   DEFAULT = 0;
@@ -15,8 +15,8 @@ enum ContentPageSortKey {
 }
 
 service ContentPageProtoService {
-  // Gets a specific content page by handle
-  rpc GetContentPageByHandle(GetContentPageByHandleProtoRequest) returns (GetContentPageByHandleProtoResponse) {}
+  // Gets a list of content pages by handle
+  rpc GetContentPageByHandles(GetContentPageByHandlesProtoRequest) returns (GetContentPageByHandlesProtoResponse) {}
 
   // Gets a list of content pages by ids
   rpc GetContentPagesByIds(GetContentPagesByIdsProtoRequest) returns (GetContentPagesByIdsProtoResponse) {}
@@ -25,16 +25,16 @@ service ContentPageProtoService {
   rpc GetContentPagesBySearch(GetContentPagesBySearchProtoRequest) returns (GetContentPagesBySearchProtoResponse) {}
 }
 
-// GetContentPageByHandle request model
-message GetContentPageByHandleProtoRequest {
-  // The handle of the content page requested
-  string handle = 1;
+// GetContentPageByHandles request model
+message GetContentPageByHandlesProtoRequest {
+  // The handles of the content page requested
+  repeated string handles = 1;
 }
 
-// GetContentPageByHandle response model
-message GetContentPageByHandleProtoResponse {
-  // The content page found, if any
-  lightops.type.ContentPageProto content_page = 1;
+// GetContentPageByHandles response model
+message GetContentPageByHandlesProtoResponse {
+  // The content pages found, if any
+  repeatedlightops.type.ContentPageProto content_pages = 1;
 }
 
 // GetContentPagesByIds request model

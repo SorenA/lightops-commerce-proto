@@ -1,11 +1,11 @@
 syntax = "proto3";
 
-package service;
+package lightops.service;
 
 option csharp_namespace = "LightOps.Commerce.Proto.Services";
 
 import "google/protobuf/wrappers.proto";
-import "../type/meta_field.proto";
+import "Protos/type/meta_field.proto";
 
 service MetaFieldProtoService {
   // Gets a list of meta-field by ids

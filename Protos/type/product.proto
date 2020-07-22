@@ -6,8 +6,8 @@ option csharp_namespace = "LightOps.Commerce.Proto.Types";
 
 import "google/protobuf/wrappers.proto";
 import "google/protobuf/timestamp.proto";
-import "../type/money.proto";
-import "../type/image.proto";
+import "Protos/type/money.proto";
+import "Protos/type/image.proto";
 
 message ProductProto {
   // Globally unique identifier, eg: gid://Product/1000

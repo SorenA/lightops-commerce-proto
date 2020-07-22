@@ -1,11 +1,11 @@
 syntax = "proto3";
 
-package service;
+package lightops.service;
 
 option csharp_namespace = "LightOps.Commerce.Proto.Services";
 
 import "google/protobuf/wrappers.proto";
-import "../type/product.proto";
+import "Protos/type/product.proto";
 
 enum ProductSortKey {
   DEFAULT = 0;
@@ -16,8 +16,8 @@ enum ProductSortKey {
 }
 
 service ProductProtoService {
-  // Gets a specific product by handle
-  rpc GetProductByHandle(GetProductByHandleProtoRequest) returns (GetProductByHandleProtoResponse) {}
+  // Gets a list of products by handle
+  rpc GetProductByHandles(GetProductByHandlesProtoRequest) returns (GetProductByHandlesProtoResponse) {}
 
   // Gets a list of products by ids
   rpc GetProductsByIds(GetProductsByIdsProtoRequest) returns (GetProductsByIdsProtoResponse) {}
@@ -26,16 +26,16 @@ service ProductProtoService {
   rpc GetProductsBySearch(GetProductsBySearchProtoRequest) returns (GetProductsBySearchProtoResponse) {}
 }
 
-// GetProductByHandle request model
-message GetProductByHandleProtoRequest {
-  // The handle of the product requested
-  string handle = 1;
+// GetProductByHandles request model
+message GetProductByHandlesProtoRequest {
+  // The handles of the products requested
+  repeated string handles = 1;
 }
 
-// GetProductByHandle response model
-message GetProductByHandleProtoResponse {
-  // The product found, if any
-  lightops.type.ProductProto product = 1;
+// GetProductByHandles response model
+message GetProductByHandlesProtoResponse {
+  // The products found, if any
+  repeatedlightops.type.ProductProto products = 1;
 }
 
 // GetProductsByIds request model
