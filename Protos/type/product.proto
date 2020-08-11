@@ -65,4 +65,7 @@ message ProductVariantProto {
 
   // The unit price of the product variant
   lightops.type.MoneyProto unit_price = 5;
+
+  // The images of the product variant
+  repeated lightops.type.ImageProto images = 6;
 }

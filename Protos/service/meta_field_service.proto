@@ -32,7 +32,7 @@ message GetMetaFieldsByIdsProtoResponse {
 
 // GetMetaFieldsByParentIds request model
 message GetMetaFieldsByParentIdsProtoRequest {
-  // The ids of the meta-fields requested
+  // The parent ids of the meta-fields requested
   repeated string parent_ids = 1;
 }
 
