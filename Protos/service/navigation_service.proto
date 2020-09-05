@@ -4,7 +4,6 @@ package lightops.service;
 
 option csharp_namespace = "LightOps.Commerce.Proto.Services";
 
-import "google/protobuf/wrappers.proto";
 import "Protos/type/navigation.proto";
 
 service NavigationProtoService {

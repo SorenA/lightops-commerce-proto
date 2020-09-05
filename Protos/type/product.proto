@@ -4,7 +4,6 @@ package lightops.type;
 
 option csharp_namespace = "LightOps.Commerce.Proto.Types";
 
-import "google/protobuf/wrappers.proto";
 import "google/protobuf/timestamp.proto";
 import "Protos/type/money.proto";
 import "Protos/type/image.proto";
