@@ -2,11 +2,25 @@
 
 Monorepo for LightOps Commerce Service definitions using Protocol Buffers.
 
+## Types
+
+- Money
+- Image
+- Navigation
+- Content Page
+- Meta Field
+- Category
+- Product
+- Product Variant
+
 ## Services
 
-- Health V1
-- Navigation V1
-- Content Page V1
-- Meta Field V1
-- Category V1
-- Product V1
+- Navigation Service
+- Content Page Service
+- Meta Field Service
+- Category Service
+- Product Service
+
+## Health Service
+
+Health service from [gRPC](https://github.com/grpc/grpc/blob/master/doc/health-checking.md)
