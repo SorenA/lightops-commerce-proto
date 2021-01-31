@@ -5,8 +5,9 @@ package lightops.type;
 option csharp_namespace = "LightOps.Commerce.Proto.Types";
 
 import "google/protobuf/wrappers.proto";
+import "Protos/type/localized_string.proto";
 
-message ImageProto {
+message Image {
   // Globally unique identifier, eg: gid://Image/1000
   string id = 1;
 
@@ -14,7 +15,7 @@ message ImageProto {
   string url = 2;
 
   // The alt text of the image
-  string alt_text = 3;
+  repeated lightops.type.LocalizedString alt_text = 3;
 
   // The focal center of the image from the top ranging 0-1
   google.protobuf.DoubleValue focal_center_top = 4;
