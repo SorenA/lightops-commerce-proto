@@ -4,21 +4,22 @@ Monorepo for LightOps Commerce Service definitions using Protocol Buffers.
 
 ## Types
 
-- Money
-- Image
-- Navigation
-- Content Page
-- Meta Field
 - Category
+- Content Page
+- Image
+- Localized String
+- Meta Field
+- Money
+- Navigation
 - Product
 - Product Variant
 
 ## Services
 
-- Navigation Service
+- Category Service
 - Content Page Service
 - Meta Field Service
-- Category Service
+- Navigation Service
 - Product Service
 
 ## Health Service
